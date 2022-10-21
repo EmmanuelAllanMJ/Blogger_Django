@@ -22,15 +22,10 @@ My blog
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
         <ul>
-            <li>
-                <article class='post'>
-                    <img src="{% static "blog/images/mountains.jpg" %}" alt='Mountain Hiking'/>
-                    <div class='post__content'>
-                        <h3>Mountain Hiking</h3>
-                        <p>There's nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoying the view!</p>
-                    </div>
-                </article>
-            </li>
+            {% for post in posts%}
+            {% include "blog/includes/post.html" %}
+            {% endfor %}
+
         </ul>
     </section>
     <section id="about">
